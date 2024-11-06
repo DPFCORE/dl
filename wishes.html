@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>心愿清单 - 我们的故事</title>
+    <style>
+        /* 复用主页的基础样式 */
+        :root {
+            --primary-color: #ff758c;
+            --secondary-color: #ff7eb3;
+            --background-color: #fff0f3;
+            --text-color: #4a4a4a;
+        }
+
+        body {
+            font-family: '楷体', 'Microsoft YaHei', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+            color: var(--text-color);
+        }
+
+        header {
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            text-align: center;
+            padding: 3rem;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 0.5em;
+        }
+
+        nav {
+            background-color: white;
+            padding: 1rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 2rem;
+        }
+
+        nav a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-size: 1.1em;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--secondary-color);
+        }
+
+        .wishes-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .wish-card {
+            background: white;
+            border-radius: 15px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .wish-status {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            border: 2px solid var(--primary-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+        .wish-status.completed {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .wish-content {
+            flex: 1;
+        }
+
+        .wish-date {
+            color: #888;
+            font-size: 0.9em;
+        }
+
+        .add-wish {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 60px;
+            height: 60px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2em;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>心愿清单</h1>
+        <p>记录我们的梦想和目标</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="memories.html">美好回忆</a></li>
+            <li><a href="milestones.html">重要时刻</a></li>
+            <li><a href="photos.html">照片墙</a></li>
+            <li><a href="wishes.html">心愿清单</a></li>
+            <li><a href="love-diary.html">返回首页</a></li>
+        </ul>
+    </nav>
+    <div class="wishes-container">
+        <div class="wish-card">
+            <div class="wish-status">✓</div>
+            <div class="wish-content">
+                <h3>一起去西藏</h3>
+                <p>去西藏看一次浪漫的日出</p>
+                <div class="wish-date">计划时间：2025年夏季</div>
+            </div>
+        </div>
+        <!-- 更多心愿 -->
+    </div>
+    <div class="add-wish">+</div>
+</body>
+</html> 

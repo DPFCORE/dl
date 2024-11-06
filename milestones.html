@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>重要时刻 - 我们的故事</title>
+    <style>
+        /* 复用主页的基础样式 */
+        :root {
+            --primary-color: #ff758c;
+            --secondary-color: #ff7eb3;
+            --background-color: #fff0f3;
+            --text-color: #4a4a4a;
+        }
+
+        body {
+            font-family: '楷体', 'Microsoft YaHei', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+            color: var(--text-color);
+        }
+
+        header {
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            text-align: center;
+            padding: 3rem;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 0.5em;
+        }
+
+        nav {
+            background-color: white;
+            padding: 1rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 2rem;
+        }
+
+        nav a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-size: 1.1em;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--secondary-color);
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background: var(--primary-color);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -2px;
+        }
+
+        .milestone-item {
+            padding: 1rem;
+            position: relative;
+            width: 45%;
+            margin: 2rem 0;
+        }
+
+        .milestone-item::after {
+            content: '❤️';
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            right: -45px;
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .milestone-item:nth-child(even) {
+            margin-left: 55%;
+        }
+
+        .milestone-item:nth-child(even)::after {
+            left: -45px;
+        }
+
+        .milestone-content {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>重要时刻</h1>
+        <p>记录我们共同走过的每一步</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="memories.html">美好回忆</a></li>
+            <li><a href="milestones.html">重要时刻</a></li>
+            <li><a href="photos.html">照片墙</a></li>
+            <li><a href="wishes.html">心愿清单</a></li>
+            <li><a href="love-diary.html">返回首页</a></li>
+        </ul>
+    </nav>
+    <div class="timeline">
+        <div class="milestone-item">
+            <div class="milestone-content">
+                <h3>相识</h3>
+                <p class="date">2024年10月21日</p>
+                <p>在那个特别的日子，我们相遇了...</p>
+            </div>
+        </div>
+        <!-- 更多里程碑 -->
+    </div>
+</body>
+</html> 

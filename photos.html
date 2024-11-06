@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>照片墙 - 我们的故事</title>
+    <style>
+        /* 复用主页的基础样式 */
+        :root {
+            --primary-color: #ff758c;
+            --secondary-color: #ff7eb3;
+            --background-color: #fff0f3;
+            --text-color: #4a4a4a;
+        }
+
+        body {
+            font-family: '楷体', 'Microsoft YaHei', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+            color: var(--text-color);
+        }
+
+        header {
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            text-align: center;
+            padding: 3rem;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 0.5em;
+        }
+
+        nav {
+            background-color: white;
+            padding: 1rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 2rem;
+        }
+
+        nav a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-size: 1.1em;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--secondary-color);
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1rem;
+            padding: 2rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            cursor: pointer;
+        }
+
+        .gallery-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .gallery-item:hover .gallery-image {
+            transform: scale(1.1);
+        }
+
+        .gallery-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0,0,0,0.5);
+            color: white;
+            padding: 1rem;
+            transform: translateY(100%);
+            transition: transform 0.3s;
+        }
+
+        .gallery-item:hover .gallery-caption {
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>照片墙</h1>
+        <p>珍藏每一个甜蜜瞬间</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="memories.html">美好回忆</a></li>
+            <li><a href="milestones.html">重要时刻</a></li>
+            <li><a href="photos.html">照片墙</a></li>
+            <li><a href="wishes.html">心愿清单</a></li>
+            <li><a href="love-diary.html">返回首页</a></li>
+        </ul>
+    </nav>
+    <div class="gallery">
+        <div class="gallery-item">
+            <img src="photo1.jpg" alt="甜蜜时刻" class="gallery-image">
+            <div class="gallery-caption">
+                <h4>第一次约会</h4>
+                <p>2024年12月5日</p>
+            </div>
+        </div>
+        <!-- 更多照片 -->
+    </div>
+</body>
+</html> 

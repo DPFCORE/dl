@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>美好回忆 - 我们的故事</title>
+    <style>
+        /* 复用主页的基础样式 */
+        :root {
+            --primary-color: #ff758c;
+            --secondary-color: #ff7eb3;
+            --background-color: #fff0f3;
+            --text-color: #4a4a4a;
+        }
+
+        body {
+            font-family: '楷体', 'Microsoft YaHei', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+            color: var(--text-color);
+        }
+
+        header {
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            text-align: center;
+            padding: 3rem;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 0.5em;
+        }
+
+        nav {
+            background-color: white;
+            padding: 1rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 2rem;
+        }
+
+        nav a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-size: 1.1em;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--secondary-color);
+        }
+
+        .memory-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
+        }
+
+        .memory-item {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .memory-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .memory-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .memory-content {
+            padding: 1.5rem;
+        }
+
+        .memory-tags {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .tag {
+            background: var(--background-color);
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.9em;
+            color: var(--primary-color);
+        }
+
+        .mood-icon {
+            font-size: 1.5em;
+            margin-right: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>美好回忆</h1>
+        <p>珍藏每一个值得回忆的瞬间</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="memories.html">美好回忆</a></li>
+            <li><a href="milestones.html">重要时刻</a></li>
+            <li><a href="photos.html">照片墙</a></li>
+            <li><a href="wishes.html">心愿清单</a></li>
+            <li><a href="love-diary.html">返回首页</a></li>
+        </ul>
+    </nav>
+    <div class="memory-grid">
+        <article class="memory-item">
+            <img src="date1.jpg" alt="第一次约会" class="memory-image">
+            <div class="memory-content">
+                <span class="date-badge">2024年12月5日</span>
+                <h3>第一次约会</h3>
+                <p>那天阳光正好，我们一起去了咖啡厅，聊了很多很多...</p>
+                <div class="mood-icon">😊</div>
+                <div class="memory-tags">
+                    <span class="tag">约会</span>
+                    <span class="tag">咖啡</span>
+                    <span class="tag">初次相见</span>
+                </div>
+            </div>
+        </article>
+        <!-- 更多回忆卡片 -->
+    </div>
+</body>
+</html> 

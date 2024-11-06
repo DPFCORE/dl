@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我们的故事</title>
+    <style>
+        /* 使用更浪漫的配色和字体 */
+        :root {
+            --primary-color: #ff758c;
+            --secondary-color: #ff7eb3;
+            --background-color: #fff0f3;
+            --text-color: #4a4a4a;
+            --progress-love: #ff7eb3;
+            --progress-happy: #7ec4ff;
+            --progress-safe: #98fb98;
+        }
+
+        body {
+            font-family: '楷体', 'Microsoft YaHei', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+            color: var(--text-color);
+        }
+        
+        header {
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            text-align: center;
+            padding: 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 0.5em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .love-counter {
+            font-size: 1.2em;
+            margin-top: 1em;
+            background: rgba(255,255,255,0.2);
+            padding: 10px;
+            border-radius: 20px;
+            display: inline-block;
+        }
+
+        nav {
+            background-color: white;
+            padding: 1rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 2rem;
+        }
+
+        nav a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-size: 1.1em;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--secondary-color);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            display: grid;
+            grid-template-columns: 7fr 3fr;
+            gap: 2rem;
+        }
+
+        .memory-card {
+            background: white;
+            border-radius: 15px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .memory-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .memory-card img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+        }
+
+        .date-badge {
+            background: var(--primary-color);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            display: inline-block;
+        }
+
+        .sidebar {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .milestone {
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        footer {
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .heart {
+            color: var(--primary-color);
+            font-size: 1.2em;
+        }
+
+        .stats-container {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin-top: 2rem;
+        }
+
+        .stat-item {
+            margin-bottom: 1.5rem;
+        }
+
+        .stat-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-value {
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 20px;
+            background: #f0f0f0;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .progress-fill {
+            height: 100%;
+            border-radius: 10px;
+            transition: width 1s ease-in-out;
+            position: relative;
+        }
+
+        .progress-fill.love {
+            background: var(--progress-love);
+        }
+
+        .progress-fill.happy {
+            background: var(--progress-happy);
+        }
+
+        .progress-fill.safe {
+            background: var(--progress-safe);
+        }
+
+        .progress-animation {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(
+                90deg,
+                rgba(255,255,255,0) 0%,
+                rgba(255,255,255,0.3) 50%,
+                rgba(255,255,255,0) 100%
+            );
+            animation: shimmer 2s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>我们的故事</h1>
+        <p>记录每一个值得珍藏的瞬间</p>
+        <div class="love-counter">
+            我们已经在一起 13 天啦 ❤️
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="memories.html">美好回忆</a></li>
+            <li><a href="milestones.html">重要时刻</a></li>
+            <li><a href="photos.html">照片墙</a></li>
+            <li><a href="wishes.html">心愿清单</a></li>
+            <li><a href="index.html">返回首页</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <main>
+            <article class="memory-card">
+                <img src="placeholder.jpg" alt="约会照片">
+                <span class="date-badge">2024年10月21日</span>
+                <h2>第一次聊天</h2>
+                <p>第一次聊天，双方都有点紧张，但是很快就熟悉了起来。</p>
+                <div class="location">📍 地点：北京-南京</div>
+            </article>
+
+            <article class="memory-card">
+                <img src="placeholder.jpg" alt="约会照片">
+                <span class="date-badge">2024年10月27日</span>
+                <h2>第一次收到鲜花</h2>
+                <p>表演时的意外惊喜，收到了来自远方的思念，真的很感动。</p>
+                <div class="location">📍 地点：北京-南京</div>
+            </article>
+        </main>
+
+        <aside class="sidebar">
+            <h3>❤️ 重要的日子</h3>
+            <div class="milestone">
+                <strong>相识</strong>
+                <p>2024年10月21日</p>
+            </div>
+            <div class="milestone">
+                <strong>第一次约会</strong>
+                <p>2024年12月5日</p>
+            </div>
+            
+            <h3>💝 即将到来</h3>
+            <ul>
+                <li>她的生日</li>
+                <li>下一次旅行</li>
+                <li>周年纪念日</li>
+            </ul>
+
+            <div class="stats-container">
+                <h3>💕 恋爱数值</h3>
+                
+                <div class="stat-item">
+                    <div class="stat-header">
+                        <span>好感度</span>
+                        <span class="stat-value">92%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill love" style="width: 92%">
+                            <div class="progress-animation"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stat-item">
+                    <div class="stat-header">
+                        <span>幸福指数</span>
+                        <span class="stat-value">88%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill happy" style="width: 88%">
+                            <div class="progress-animation"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stat-item">
+                    <div class="stat-header">
+                        <span>安全感</span>
+                        <span class="stat-value">95%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill safe" style="width: 95%">
+                            <div class="progress-animation"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <footer>
+        <p>DPF Forever & Always LXY<span class="heart">❤️</span></p>
+    </footer>
+</body>
+</html> 
